@@ -8,7 +8,7 @@ import { SerieModule } from './serie/serie.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SerieModule],
+  imports: [BrowserModule, AppRoutingModule, SerieModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

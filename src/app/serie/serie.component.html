@@ -1,3 +1,32 @@
-<p>
-  serie works!
-</p>
+<table class="table table-hover" style="width: auto">
+  <caption>
+    Seasons average:
+    <span>{{ getSeasonsAverage() }}</span>
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Channel</th>
+      <th scope="col">Seasons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let serie of series" class="table-active">
+      <th>
+        {{ serie.id.toString() }}
+      </th>
+      <td>
+        <a href="{{ serie.webpage }}" class="text-decoration-none">
+          {{ serie.name }}
+        </a>
+      </td>
+      <td>
+        {{ serie.channel }}
+      </td>
+      <td>
+        {{ serie.seasons.toString() }}
+      </td>
+    </tr>
+  </tbody>
+</table>

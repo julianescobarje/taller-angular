@@ -2,11 +2,13 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { SerieService } from './serie.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('Service: Serie', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SerieService]
+      imports: [HttpClientTestingModule],
+      providers: [SerieService],
     });
   });
 
